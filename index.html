@@ -23,14 +23,14 @@
         <li><a href="#portfolio">portfolio</a></li>
         <li><a href="#contact">contact me</a></li>
       </ul>
-      <a href="#" class="btn">subscribe</a>
+      <a href="#" class="btnn">subscribe</a>
     </nav>
     <div class="container">
       <div class="container-texts">
         <h4>hello my name is</h4>
         <h1>Ali <span> Hasan</span></h1>
         <h3>Im a <span>Front-end </span>Developer</h3>
-        <a href="#" class="btn">download cv </a>
+        <a href="#" class="btnn">download cv </a>
         <div class="social">
             <a href="https://www.facebook.com/eliano.hasan" target="blank"><img src="fb.png" alt=""></a>
             <a href="https://www.instagram.com/ali.e.hasan.92?igsh=cWtjaXRheHFtanA2:" target="blank"><img src="insta.png"></a>
@@ -285,5 +285,65 @@
       <p class="end">Copy Right By Ali Hasan</p>
     </div>
   </footer>
+    <!--menu -->
+   <button id="open" class="btn">menu</button>
+  <button id="close" class="btn">close</button>
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="#home">home</a></li>
+      <hr>
+      <li><a href="#about">abut me</a></li>
+      <hr>
+      <li><a href="#skills">skills</a></li>
+      <hr>
+      <li><a href="#services">services</a></li>
+      <hr>
+      <li><a href="#portfolio">portfolio</a></li>
+      <hr>
+      <li><a href="#contact">contact</a></li>
+      <hr>
+      <li><a href="https://www.facebook.com/eliano.hasan" target="blank"><i class="bi fb bi-facebook"></i> facebook</a></li>
+      <hr>
+      <li><a href="https://www.instagram.com/ali.e.hasan.92?igsh=cWtjaXRheHFtanA2:" target="blank"><i class="bi ig bi-instagram"></i> instagram</a></li>
+      <hr>
+      <li><a href="https://github.com/Ali-hasan-sss" target="blank"><i class="bi git bi-github"></i> github</a></li>
+      <hr>
+      <li><a href="https://www.linkedin.com/in/ali-hasan-536312297" target="blank"><i class="bi ln bi-linkedin"></i> linkedin</a></li>
+      <hr>
+      <li><a href="https://api.whatsapp.com/send/?phone=+963994488858" target="blank"><i class="bi wa bi-whatsapp"></i> whatsapp</a></li>
+      <hr>
+    </ul>
+    <hr>
+  </div>
+  <button id="btn"><i class="bi bi-arrow-up-circle-fill"></i></button>
+  <script>
+let close = document.getElementById('close');
+let open = document.getElementById('open');
+let menu = document.getElementById('menu');
+let btn = document.getElementById('btn');
+let body = document.getElementById('body');
+open.onclick = function(){
+    menu.style.left='0';
+    open.style.left='-200px';
+    close.style.left='200px';
+    close.style.background='red';
+}
+close.onclick = function(){
+    menu.style.left='-200px';
+    open.style.left='-0px';
+    close.style.left='-200px';
+}
+window.onscroll = function(){
+          if (scrollY >= 750){
+            btn.style.display = 'block';
+        }else{
+            btn.style.display = 'none';
+        }
+}
+  
+  btn.onclick = function(){
+  scroll(0,0)
+}
+  </script>
 </body>
 </html>
