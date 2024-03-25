@@ -77,7 +77,7 @@ p{
   cursor: pointer;
   transition: 0.4s;
 }
-.btn:hover{
+.btnn:hover{
   background: transparent;
   border: 2px solid var(--primarycolor);
 }
