@@ -128,14 +128,14 @@ nav ul li a:hover{
 }
 .home .container-image img{
   position: absolute;
-  top: 300px;
+  top: 400px;
   height: 30%;
   left: 50%;
   transform: translateX(-50%);
   transition: top 1s,left 1s;
 }
 .home .container-image:hover .shape {
-  top: 200px;
+  top: 300px;
 }
 .home .container-image:hover  .pic{
   left: 45%;
