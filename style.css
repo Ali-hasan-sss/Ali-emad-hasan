@@ -295,6 +295,11 @@ nav ul li a:hover{
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: .4s;
+}
+.skill:hover{
+  scale: 1.2;
+  background: var(--primarycolor);
 }
 .skills img{
   width: 60%;
@@ -320,6 +325,11 @@ nav ul li a:hover{
   background:  var(--bgcolor-2);
   border-radius: 30px;
   overflow: hidden;
+  transition: .4s;
+}
+.portfolio-container .cards:hover{
+  box-shadow: 2px 2px 2px var(--primarycolor);
+  scale: 1.1;
 }
 .portfolio-container .cards .card-info{
   justify-content: center;
