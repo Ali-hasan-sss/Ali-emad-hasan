@@ -1,0 +1,369 @@
+:root {
+  --primarycolor: #ff274b;
+  --secondarycolor: #f7bcf7;
+  --lightcolor: #ffffff;
+  --bgcolor-1: #171a1c;
+  --bgcolor-2: #22282a;
+  --padding: 8%;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-family: "Encode Sans Expanded", sans-serif;
+  font-size: 16px;
+  color: var(--lightcolor);
+  scroll-behavior: smooth;
+}
+h1 {
+  font-size: 4.5rem;
+}
+ h2{
+  font-size: 2rem;
+  letter-spacing: 0.12rem;
+  cursor: pointer;
+}
+h3{
+  font-size: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+h4{
+  font-size: 1.25rem;
+  letter-spacing: 0.12rem;
+  color: var(--secondarycolor);
+}
+h5{
+  margin: 1.5rem 0 ;
+  font-size: 1.37rem;
+  letter-spacing: 2px;
+}
+span{
+  color: var(--primarycolor);
+}
+p{
+  color: var(--secondarycolor);
+  letter-spacing: 1px;
+  line-height: 1.8rem;
+  font-size: 1rem;
+}
+.text-center{
+  text-align: center;
+}
+.btn{
+  text-decoration: none;
+  color: var(--lightcolor);
+  background: var(--primarycolor);
+  font-weight: bold;
+  padding: 0.81rem 1.8rem;
+  border-radius: 1.5rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.btn:hover{
+  background: transparent;
+  border: 2px solid var(--primarycolor);
+}
+/*..........................................gineral end..................................................
+............................................................................................................*/
+/*home start*/
+nav ul li a{
+  text-decoration: none;
+  color: var(--lightcolor);
+  text-transform: capitalize;
+  transform: 0.4s;
+  border-radius: 1.5rem;
+  padding: 5px;
+}
+nav ul li a:hover{
+  background: var(--primarycolor);
+}
+.home{
+  width: 100%;
+  height: 100vh;
+  background: var(--bgcolor-1);
+  display: flex;
+  flex-direction: column;
+}
+.home nav{
+  padding-top: 2.2rem;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0.2rem ;
+}
+.home .container{
+  flex-grow: 1;
+  padding: var(--padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home .container .container-texts{
+  position: relative;
+  bottom: 70px;
+}
+.social{
+  margin-top: 3.5rem;
+}
+.social img{
+  margin-right: 2rem;
+  width: 2.5rem;
+}
+.social img:hover{
+  transform: scale(1.2);
+}
+.home .container-image{
+  height: 90%;
+  width: 45%;
+  position: relative;
+}
+.home .container-image img{
+  position: absolute;
+  top: 300px;
+  height: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: top 1s,left 1s;
+}
+.home .container-image:hover .shape {
+  top: 200px;
+}
+.home .container-image:hover  .pic{
+  left: 45%;
+}
+/*..........................................home end..................................................
+............................................................................................................*/
+/*about start*/
+.about{
+  background: var(--bgcolor-2);
+  padding: var(--padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about .container-images{
+  width: 35%;
+}
+.about .container-images img{
+  width: 90%;
+}
+.about .container-texts{
+  width: 50%;
+}
+/*..........................................about end..................................................
+............................................................................................................*/
+/*services start*/
+.services{
+  background: var(--bgcolor-1);
+  padding: var(--badding);
+}
+.card-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+/*card*/
+.card h2{
+  margin: 10px ;
+  padding: 0;
+}
+.card{
+  width: 400px;
+  height: 450px;
+  perspective: 1000px;
+  corsor: pointer;
+  margin: 2rem;
+}
+.card img{
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+.card .idea{
+  width: 150px;
+  height: 250px;
+}
+.card-container{
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card:hover .card-container{
+  transform: rotateY(180deg);
+}
+.card-face{
+  width:100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: var(--bgcolor-2);
+}
+.continer-about{
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0 0 0;
+  padding: 20px;
+}
+.front-face{
+  transform: rotateY(0deg);
+}
+.back-face{
+  display: flex;
+  transform: rotateY(180deg);
+}
+.row{
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+  font-size: 2rem;
+}
+.row i{
+  color: #686767;
+}
+.ig:hover{
+  color: #e1306c;
+}
+.git:hover{
+  color: #000000;
+}
+.fb:hover{
+  color: #3b5998;
+}
+.ln:hover{
+  color: #3b5998;
+}
+.wa:hover{
+  color: green;
+}
+/*card-end*/
+/*..........................................services end..................................................
+............................................................................................................*/
+/*skills start*/
+.skills{
+  background: var(--bgcolor-2);
+  padding: 2rem var(--padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills .container-images{
+  width: 40%;
+}
+.skills .container-images img{
+  width: 100%;
+
+}
+ .container-skills{
+  width: 50%;
+}
+ .content-skills{
+  display: flex;
+  flex-wrap: wrap;
+   margin-top: 4rem;
+}
+.skill{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--lightcolor);
+  margin: 0 2rem 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills img{
+  width: 60%;
+}
+/*..........................................skills end..................................................
+............................................................................................................*/
+/*portfolio start*/
+.portfolio{
+  background: var(--bgcolor-1);
+  padding: var(--badding);
+}
+.portfolio-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-container .cards{
+  width: 300px;
+  height: 350px;
+  corsor: pointer;
+  margin: 2rem;
+  background:  var(--bgcolor-2);
+  border-radius: 30px;
+  overflow: hidden;
+}
+.portfolio-container .cards .card-info{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+}
+.portfolio-container .cards h4{
+  color: var(--lightcolor);
+  margin-bottom: 5px;
+}
+.portfolio-container .cards a{
+  margin-right: 30px;
+  color: var(--lightcolor);
+  text-decoration: none;
+}
+.portfolio-container .cards img{
+  width: 100%;
+  height: 80%;
+}
+
+
+/*..........................................portfolio end..................................................
+............................................................................................................*/
+footer{
+  background: var(--bgcolor-2);
+  padding: 2rem var(--padding);
+}
+.footer-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-content p{
+  color: var(--lightcolor);
+  text-align: center;
+  width: 500px;
+  margin-top: 1rem;
+}
+footer .footer-content .end{
+  color: var(--primarycolor);
+  margin-top: 1rem;
+}
+/*..........................................footer end..................................................
+............................................................................................................*/
